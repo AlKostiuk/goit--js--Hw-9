@@ -16,3 +16,17 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer{
+  display: flex;
+  max-width: 20px;
+
+}
+
+.field{
+  text-align: center;
+  margin-right: 10px;
+  color: tomato;
+
+}
+
