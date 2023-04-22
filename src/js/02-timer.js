@@ -42,6 +42,10 @@ function updateTimer() {
   spanSeconds.textContent = timeDifferenceObject.seconds;
   const timerStart = setInterval(() => {
     timeDifferenceMs -= 1000;
+    if(timeDifferenceMs <= 0){
+      clearInterval(timerStart)
+      return
+    }
     const timeDifferenceObject = convertMs(timeDifferenceMs);
     spanDays.textContent = addLeadingZero(timeDifferenceObject.days);
     spanHours.textContent = addLeadingZero(timeDifferenceObject.hours);
